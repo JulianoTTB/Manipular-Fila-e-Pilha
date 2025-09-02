@@ -1,19 +1,19 @@
 public class Dados {
-    private int dado;
+    private int valor;
     private Dados proximo;
 
-    public Dados(int dado, Dados proximo){
-        this.dado = dado;
+    public Dados(int valor, Dados proximo){
+        this.valor = valor;
         this.proximo = proximo;
     }
 
-    public Dados(int dado){
-        this.dado = dado;
+    public Dados(int valor){
+        this.valor = valor;
         this.proximo = null;
     }
 
-    public int getDado(){
-        return this.dado;
+    public int getValor(){
+        return this.valor;
     }
 
     public Dados getProximo(){

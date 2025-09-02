@@ -17,11 +17,11 @@ public class Fila {
     public void inserir(int numero){
         if(vazia()){
 
-            this.fronte = new Dados(numero, null);
+            this.fronte = new Dados(numero);
             this.cauda = fronte;
         }
         else{
-            Dados temporario = new Dados(numero, null);
+            Dados temporario = new Dados(numero);
 
             this.cauda.setProximo(temporario);
 
@@ -41,7 +41,7 @@ public class Fila {
         String numeros = "";
 
         for(Dados i = this.fronte; i != null; i = i.getProximo()){
-            numeros += i.getDado() + " ";
+            numeros += i.getValor() + " ";
         }
 
         return numeros;
@@ -56,6 +56,6 @@ public class Fila {
         for(int i = 0; i < indice; i++)
                inicio = inicio.getProximo();
 
-        return inicio.getDado();
+        return inicio.getValor();
     }
 }
