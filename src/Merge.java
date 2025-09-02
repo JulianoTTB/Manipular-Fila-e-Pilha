@@ -6,40 +6,40 @@ public class Merge {
     public Merge() {
     }
 
-    public int [] merge(Pilha p1, Lista l1) {
-        int tamanhoTotal = p1.getTamanho + l1.getTamanho;
+    public int [] merge(Fila f1, Fila f2) {
+        int tamanhoTotal = f1.getTamanho() + f2.getTamanho();
         int [] c = new int [tamanhoTotal];
 
         ponteiro1 = 0;
         ponteiro2 = 0;
         ponteiro3 = 0;
 
-        while(ponteiro1 < p1.getTamanho && ponteiro2 < l1.getTamanho) {
-            if(p1.getPilha[ponteiro1] < l1.getLista[ponteiro2]) {
-                c[ponteiro3] = p1.getPilha[ponteiro1];
+        while(ponteiro1 < f1.getTamanho() && ponteiro2 < f2.getTamanho()) {
+            if(f1.getFila[ponteiro1] < f2.getFila[ponteiro2]) {
+                c[ponteiro3] = f1.getFila[ponteiro1];
                 ponteiro3 += 1;
                 ponteiro1 += 1;
-                c[ponteiro3] = l1.getLista[ponteiro2];
+                c[ponteiro3] = f2.getFila[ponteiro2];
                 ponteiro3 += 1;
                 ponteiro2 += 1;
             } else {
-                c[ponteiro3] = l1.getLista[ponteiro2];
+                c[ponteiro3] = f2.getFila[ponteiro2];
                 ponteiro3 += 1;
                 ponteiro2 += 1;
-                c[ponteiro3] = p1.getPilha[ponteiro1];
+                c[ponteiro3] = f1.getFila[ponteiro1];
                 ponteiro3 += 1;
                 ponteiro1 += 1;
             }
         }
 
-        while(ponteiro1 < p1.getTamanho) {
-            c[ponteiro3] = p1.getPilha[ponteiro1];
+        while(ponteiro1 < f1.getTamanho()) {
+            c[ponteiro3] = f1.getFila[ponteiro1];
             ponteiro3 += 1;
             ponteiro1 += 1;
         }
 
-        while(ponteiro2 < l1.getTamanho) {
-            c[ponteiro3] = l1.getPilha[ponteiro2];
+        while(ponteiro2 < f2.getTamanho()) {
+            c[ponteiro3] = f2.getFila[ponteiro2];
             ponteiro3 += 1;
             ponteiro2 += 1;
         }
