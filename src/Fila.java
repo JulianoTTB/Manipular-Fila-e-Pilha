@@ -49,4 +49,13 @@ public class Fila {
     public int getTamanho(){
         return this.tamanho;
     }
+
+    public int getInfo(int indice){
+        Dados inicio = this.fronte;
+
+        for(int i = 0; i < indice; i++)
+               inicio = inicio.getProximo();
+
+        return inicio.getDado();
+    }
 }
