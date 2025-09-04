@@ -32,7 +32,12 @@ public class Fila {
 
     public void remover(){
         if (vazia()) return;
+
+        Dados temporario = this.fronte;
+
         this.fronte = this.fronte.getProximo();
+
+        temporario.setProximo(null);
         this.tamanho--;
     }
 
