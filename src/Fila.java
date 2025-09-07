@@ -60,6 +60,6 @@ public class Fila {
     public int getPrimeiroValor(){
         if(vazia()) throw new IllegalStateException("Fila está vazia");
 
-        return this.fronte.getValor();
+        return -2_000_000_000;
     }
 }
