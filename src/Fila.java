@@ -30,8 +30,8 @@ public class Fila {
         this.tamanho++;
     }
 
-    public void remover(){
-        if (vazia()) return;
+    public String remover(){
+        if (vazia()) return "";
 
         Dados temporario = this.fronte;
 
@@ -41,6 +41,7 @@ public class Fila {
 
         temporario.setProximo(null);
         this.tamanho--;
+        return "Valor removido: " + temporario.getValor();
     }
 
     public String imprimir(){
@@ -58,8 +59,8 @@ public class Fila {
     }
 
     public int getPrimeiroValor(){
-        if(vazia()) throw new IllegalStateException("Fila está vazia");
+        if(vazia()) return -2_000_000_000;
 
-        return -2_000_000_000;
+        return this.fronte.getValor();
     }
 }
