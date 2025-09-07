@@ -37,6 +37,8 @@ public class Fila {
 
         this.fronte = this.fronte.getProximo();
 
+        if(this.fronte == null) this.cauda = null;
+
         temporario.setProximo(null);
         this.tamanho--;
     }
@@ -55,12 +57,9 @@ public class Fila {
         return this.tamanho;
     }
 
-    public int getInfo(int indice){
-        Dados inicio = this.fronte;
+    public int getPrimeiroValor(){
+        if(vazia()) throw new IllegalStateException("Fila está vazia");
 
-        for(int i = 0; i < indice; i++)
-               inicio = inicio.getProximo();
-
-        return inicio.getValor();
+        return this.fronte.getValor();
     }
 }
