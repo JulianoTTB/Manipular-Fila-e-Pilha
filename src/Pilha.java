@@ -37,7 +37,7 @@ public class Pilha {
         Dados atual = this.topo;
 
         while (atual != null) {
-            numeros += atual.getValor() + " ";  // concatenação simples
+            numeros += atual.getValor() + " ";
             atual = atual.getProximo();
         }
 
@@ -45,3 +45,4 @@ public class Pilha {
     }
 
 }
+
