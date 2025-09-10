@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        Pilha pilha = new Pilha();
         Fila fila1 = new Fila();
         Fila fila2 = new Fila();
         int numAnterior1 = -1_000_000_000;
@@ -34,19 +35,24 @@ public class Main {
                     System.out.print("Digite um número inteiro: ");
                     numero = scanner.nextInt();
                     scanner.nextLine();
+                    pilha.inserir(numero);
+                    System.out.println("Valor inserido!");
                     break;
                 case 2:
+                    System.out.println(pilha.remover());
                     break;
                 case 3:
+                    System.out.println(pilha.imprimir());
                     break;
                 case 4:
                     do {
-                        System.out.print("Digite um número inteiro (maior que:" + numAnterior1 + "): ");
+                        System.out.print("Digite um número inteiro (maior que " + numAnterior1 + "): ");
                         numero = scanner.nextInt();
                     }while (numAnterior1 >= numero);
                     numAnterior1 = numero;
                     fila1.inserir(numero);
                     scanner.nextLine();
+                    System.out.println("Valor inserido!");
                     break;
                 case 5:
                     System.out.println(fila1.remover());
@@ -57,12 +63,13 @@ public class Main {
                     break;
                 case 7:
                     do {
-                        System.out.print("Digite um número inteiro (maior que:" + numAnterior2 + "): ");
+                        System.out.print("Digite um número inteiro (maior que " + numAnterior2 + "): ");
                         numero = scanner.nextInt();
                     }while (numAnterior2 >= numero);
                     numAnterior2 = numero;
                     fila2.inserir(numero);
                     scanner.nextLine();
+                    System.out.println("Valor inserido!");
                     break;
                 case 8:
                     System.out.println(fila2.remover());
