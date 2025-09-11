@@ -12,6 +12,7 @@ public class Main {
         int opcao = 0;
         Merge merge = new Merge();
 
+        int valor;
         while(opcao != 11){
             System.out.println("***************************");
             System.out.println("1 - Inserir número na Pilha");
@@ -55,7 +56,11 @@ public class Main {
                     System.out.println("Valor inserido!");
                     break;
                 case 5:
-                    System.out.println(fila1.remover());
+                    valor = fila1.remover();
+                    if (valor == -2_000_000_000)
+                        System.out.println("Fila 1 vazia!");
+                    else
+                        System.out.println("Valor Removido: " + valor);
                     if(fila1.vazia()) numAnterior1 = -1_000_000_000;
                     break;
                 case 6:
@@ -72,7 +77,12 @@ public class Main {
                     System.out.println("Valor inserido!");
                     break;
                 case 8:
-                    System.out.println(fila2.remover());
+                    valor = fila2.remover();
+                    if (valor == -2_000_000_000)
+                        System.out.println("Fila 2 vazia!");
+                    else
+                        System.out.println("Valor Removido: " + valor);
+
                     if(fila2.vazia()) numAnterior2 = -1_000_000_000;
                     break;
                 case 9:
