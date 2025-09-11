@@ -25,7 +25,8 @@ public class Main {
             System.out.println("8 - Remover número da Fila 2");
             System.out.println("9 - Imprimir Fila 2");
             System.out.println("10 - Merge Fila 1 e Fila 2");
-            System.out.println("11 - Fechar Programa");
+            System.out.println("11 - Merge Fila 1 e Fila 2 de forma vetorial");
+            System.out.println("12 - Fechar Programa");
             System.out.println("***************************");
             System.out.print("Digite a sua escolha: ");
             opcao = scanner.nextInt();
@@ -92,6 +93,14 @@ public class Main {
                     System.out.println("Fila 1: " + fila1.imprimir());
                     System.out.println("Fila 2: " + fila2.imprimir());
                     System.out.println("Merge da Fila 1 + Fila 2: " +merge.mergeNos(fila1, fila2).imprimir());
+                    break;
+                case 11:
+                    int[] merge_vetorial = Merge.mergeVetorial(fila1, fila2);
+
+                    System.out.print("Merge de forma vetorial da Fila 1 e Fila 2: ");
+                    for(int i = 0; i < fila1.getTamanho() + fila2.getTamanho(); i++)
+                        System.out.print(merge_vetorial[i] + " ");
+                    System.out.println();
                     break;
                 default: break;
             }
