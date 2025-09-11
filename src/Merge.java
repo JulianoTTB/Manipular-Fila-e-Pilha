@@ -31,16 +31,14 @@ public class Merge {
     }
 
     public static int[] tranformarFilaEmVetor(Fila f1) {
-        int tamanhoVetor = 0;
         Fila f1Copia = new Fila();
 
         while(!f1.vazia()) {
             int no = f1.remover();
             f1Copia.inserir(no);
-            tamanhoVetor += 1;
         }
 
-        int [] f1Vetor = new int[tamanhoVetor];
+        int [] f1Vetor = new int[f1.getTamanho()];
         int i = 0;
 
         while(!f1Copia.vazia()) {
