@@ -13,7 +13,7 @@ public class Main {
         Merge merge = new Merge();
 
         int valor;
-        while(opcao != 11){
+        while(opcao != 12){
             System.out.println("***************************");
             System.out.println("1 - Inserir número na Pilha");
             System.out.println("2 - Remover número da Pilha");
@@ -95,10 +95,11 @@ public class Main {
                     System.out.println("Merge da Fila 1 + Fila 2: " +merge.mergeNos(fila1, fila2).imprimir());
                     break;
                 case 11:
-                    int[] merge_vetorial = Merge.mergeVetorial(fila1, fila2);
+                    int tam = fila1.getTamanho() + fila2.getTamanho();
+                    int[] merge_vetorial = merge.mergeVetorial(fila1, fila2);
 
                     System.out.print("Merge de forma vetorial da Fila 1 e Fila 2: ");
-                    for(int i = 0; i < fila1.getTamanho() + fila2.getTamanho(); i++)
+                    for(int i = 0; i < tam; i++)
                         System.out.print(merge_vetorial[i] + " ");
                     System.out.println();
                     break;
