@@ -1,6 +1,6 @@
-# Manipular-Fila-e-Pilha
+## Manipular-Fila-e-Pilha
 
-# COMO USAR:
+## 📖 COMO USAR:
   MAIN
 
   Ao entrar no código você se depara com o menu, com escolhas variando de 1 a 10 (além da escolha 11 que fecha o programa,
