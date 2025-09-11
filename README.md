@@ -1,5 +1,14 @@
 ## Manipular-Fila-e-Pilha
 
+## 🧑‍🎓 ALUNOS:
+<br>
+
+ **Alisson Daledone**
+ <br>
+ **Geandro Marques**
+ <br>
+ **Juliano Teles**
+
 ## 📖 COMO USAR:
   **MAIN**
 
@@ -54,8 +63,13 @@
 
   **MERGE**
   <br>
-  O Merge junta duas filas em uma só, em ordem crescente.
+  O Merge junta duas filas em uma só, em ordem crescente (digitando a opção "10").
   <img width="1069" height="415" alt="image" src="https://github.com/user-attachments/assets/e93532df-24b4-43fe-81e3-d09c064433e4" />
+  <br>
+  <br>
+  O Merge vetorial junta duas filas também, porém elas devem possuir o mesmo tamanho (digitando a opção "11").
+  <img width="1087" height="396" alt="image" src="https://github.com/user-attachments/assets/c970c81c-8d32-42eb-a6e5-b87245bac01d" />
+
 
 
 
