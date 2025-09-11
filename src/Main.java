@@ -19,7 +19,7 @@ public class Main {
             System.out.println("3 - Imprimir Pilha");
             System.out.println("4 - Inserir número na Fila 1");
             System.out.println("5 - Remover número da Fila 1");
-            System.out.println("6 - Imprimir Fial 1");
+            System.out.println("6 - Imprimir Fila 1");
             System.out.println("7 - Inserir número na Fila 2");
             System.out.println("8 - Remover número da Fila 2");
             System.out.println("9 - Imprimir Fila 2");
